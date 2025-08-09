@@ -1,13 +1,13 @@
 # MedicalCare
 ## Descripción
 
-MedicalCare es una API REST desarrollada en .NET 8 con C# y SQL Server, diseñada para gestionar las atenciones médicas de pacientes en clínicas u hospitales. Este proyecto demuestra habilidades técnicas, enfocándose en buenas prácticas, arquitectura limpia y seguridad básica.
+MedicalCare-API es una API REST desarrollada en .NET 8 con C# y SQL Server, diseñada para gestionar las atenciones médicas de pacientes en clínicas u hospitales. Este proyecto es para demostrar habilidades técnicas de desarrollo backend, enfocándose en buenas prácticas y arquitectura limpia.
 
 ## Características
 
-- Se utiliza una arquitectura modular y separada por capas para una mayor separacion de responsabilidades, separando cada capa dependiendo el contenido ya sean controllers, Carpetas de clases relacionadas con sql, lógica de negocios etc. permitiendo separar la capa de negocio de las demas capas prpias del desarrollo.
-- se separa la lógica de sentencias sql con la logica de negocios
-- se crean Endpoints RESTful para operaciones CRUD .
+- Se utiliza una arquitectura modular y separada por capas para una mayor separacion de responsabilidades, separando cada capa dependiendo el contenido ya sean controllers, Carpetas de clases relacionadas con SQL, lógica de negocios etc. permitiendo separar la capa de negocio de las demas capas propias del desarrollo.
+- se separa la lógica de sentencias sql con la logica de negocios.
+- se crean Endpoints RESTful para operaciones CRUD.
 - si bien utilicé mayormente ADO.NET, tambien utilcé Dapper para manejar las operaciones de las especialidades.
 
 - Se utiliza un servicio creado de Inyección de dependencias para validar la existencia previa de rut y para validar que las horas no se solapen con otras, tanto por doctor, y paciente sus horarios.
@@ -15,11 +15,11 @@ MedicalCare es una API REST desarrollada en .NET 8 con C# y SQL Server, diseñad
 
 -Se crean procedimientos Almacenados, uno para manejar la insercion de actualizacion  de Doctor (sp_UpdateDoctor), Se usa el procedimiento  porque primero revisamos si la especialidad cambia, si cambia, insertamos una nueva, cambia cuando se inserta nombre o descripcion. el paso siguiente inserta  los nuevos datos a actualizar.
 
-- El otro Procedimiento almacenado se llama  sp_CheckAppointmentAvailability,  se utiliza con el metodo en service para DI con el fin de  revisar disponibilidad de horario recibe fecha inicio, fecha fin, iddoctor, IdPaciente
+- El otro Procedimiento almacenado se llama  (sp_CheckAppointmentAvailability),  se utiliza con el metodo en service para DI con el fin de  revisar disponibilidad de horario recibe fecha inicio, fecha fin, iddoctor, IdPaciente
 es un procedimiento que funciona por pasos;
-si el doctor esta ocupado en ese horario, entrega un mensaje
-si el paciente tiene una hora asignada en ese horario, entrega otro mensaje
-cuando es correcto retorna 'Disponible'.
+-si el doctor esta ocupado en ese horario, entrega un mensaje
+-si el paciente tiene una hora asignada en ese horario, entrega otro mensaje
+-cuando es correcto retorna 'Disponible'.
 
 - Se agregan 10 minutos al inicio y al final por concepto de demora de paciente o por atraso de doctor.
 
@@ -40,8 +40,8 @@ cuando es correcto retorna 'Disponible'.
 
 ## Instrucciones
 
-1. Descarga el proyecto del repositorio
-2. Configura la cadena de conexión a SQL Server en la capa 'Data' en ConexionesData, actualmente estan mis credenciales a la bd.
+1. Descarga el proyecto del repositorio 'https://github.com/GuillermoReyesC/MedicalCare-API'
+2. Configura la cadena de conexión a SQL Server con tu conectionString en la capa 'Data' en ConexionesData, actualmente estan mis credenciales a la bd.
 3. abre el archivo .sln dentro de la solución
 4. ejecutalo y automaticamente estará Swagger listo para testear
 
