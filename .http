@@ -1,0 +1,234 @@
+﻿### Obtener todos los doctores
+GET https://localhost:7229/api/doctor
+Authorization: ApiKey 
+
+### Obtener doctor por ID
+GET https://localhost:7229/api/doctor/5
+Authorization: ApiKey 
+
+### Crear nuevo doctor
+POST https://localhost:7229/api/doctor
+Content-Type: application/json
+Authorization: ApiKey 
+
+{
+    "doctor_FirstName": "Jhon",
+    "doctor_LastName": "Connor",
+    "doctor_Email": "jhon.connor@hospital.com",
+    "doctor_Phone": "+56912345678",
+    "doctor_LicenseNumber": "LIC20250807",
+    "doctor_CreatedBy": "admin",
+    "doctor_CreatedAt": "07-08-2025 21:00:45",
+    "doctor_ModifiedBy": "admin",
+    "doctor_ModifiedAt": "07-08-2025 12:00:00",
+    "speciality_Name": "Neurología",
+    "speciality_Description": "Especialista en el sistema nervioso"
+}
+
+### Actualizar doctor con ID 5
+PUT https://localhost:7229/api/doctor/5
+Content-Type: application/json
+Authorization: ApiKey 
+
+{
+    "doctor_FirstName": "Jhon",
+    "doctor_LastName": "Connor",
+    "doctor_Email": "jhon.connor@hospital.com",
+    "doctor_Phone": "+56912345678",
+    "doctor_LicenseNumber": "LIC20250807",
+    "doctor_CreatedBy": "admin",
+    "doctor_CreatedAt": "07-08-2025 21:00:45",
+    "doctor_ModifiedBy": "admin",
+    "doctor_ModifiedAt": "07-08-2025 12:00:00",
+    "speciality_Name": "Neurología",
+    "speciality_Description": "Especialista en el sistema nervioso"
+}
+
+### Eliminar doctor con ID 5
+DELETE https://localhost:7229/api/doctor/5
+Authorization: ApiKey 
+
+###=====================
+### Appointments (Citas)
+###====================
+
+### Obtener todas las citas
+GET https://localhost:7229/api/appointment
+Authorization: ApiKey
+
+### Obtener cita por ID
+GET https://localhost:7229/api/appointment/5
+Authorization: ApiKey
+
+### Crear nueva cita
+POST https://localhost:7229/api/appointment
+Content-Type: application/json
+Authorization: ApiKey
+
+{
+  "patientId": 1,
+  "doctorId": 1,
+  "appointment_StartUtc": "2025-08-09T10:00:00",
+  "appointment_EndUtc": "2025-08-09T11:00:00",
+  "appointment_Diagnosis": "Preinfarto",
+  "appointment_Room": "T33",
+  "appointment_CreatedBy": "admin",
+  "appointment_CreatedAt": "2025-08-09T03:36:37.395Z",
+  "appointment_ModifiedBy": "admin",
+  "appointment_ModifiedAt": "2025-08-09T03:36:37.395Z"
+}
+
+### Actualizar cita con ID 5
+PUT https://localhost:7229/api/appointment/5
+Content-Type: application/json
+Authorization: ApiKey
+
+{
+  "patientId": 1,
+  "doctorId": 1,
+  "appointment_StartUtc": "2025-08-09T10:00:00",
+  "appointment_EndUtc": "2025-08-09T11:00:00",
+  "appointment_Diagnosis": "Preinfarto",
+  "appointment_Room": "T33",
+  "appointment_CreatedBy": "admin",
+  "appointment_CreatedAt": "2025-08-09T03:36:37.395Z",
+  "appointment_ModifiedBy": "admin",
+  "appointment_ModifiedAt": "2025-08-09T03:36:37.395Z"
+}
+
+### Eliminar cita con ID 5
+DELETE https://localhost:7229/api/appointment/5
+Authorization: ApiKey
+
+### Obtener citas por fecha (YYYY-MM-DD)
+GET https://localhost:7229/api/appointment/by-date/2025-08-15
+Authorization: ApiKey
+
+### Obtener citas por rango de fechas
+GET https://localhost:7229/api/appointment/by-date-range?start=2025-08-10T08:00:00&end=2025-08-10T18:00:00
+Authorization: ApiKey
+
+### Obtener citas por doctor (nombre o apellido)
+GET https://localhost:7229/api/appointment/by-doctor/Jhon
+Authorization: ApiKey
+
+### Obtener citas por paciente (nombre, apellido o RUT)
+GET https://localhost:7229/api/appointment/by-patient/Jerry
+Authorization: ApiKey
+
+### Obtener citas por especialidad
+GET https://localhost:7229/api/appointment/by-specialty/Reumatologia
+Authorization: ApiKey
+
+### Obtener duración promedio de citas por especialidad
+GET https://localhost:7229/api/appointment/average-duration-by-specialty
+Authorization: ApiKey
+
+
+### PACIENTES ###
+
+### Obtener todos los pacientes
+GET https://localhost:7229/api/patients
+Authorization: ApiKey
+
+### Obtener paciente por ID
+GET https://localhost:7229/api/patients/5
+Authorization: ApiKey
+
+### Crear nuevo paciente
+POST https://localhost:7229/api/patients
+Content-Type: application/json
+Authorization: ApiKey
+
+{
+  "patientFirstName": "Guillermo",
+  "patientLastName": "Reyes",
+  "patientRUT": "12345678-9",
+  "patientDateOfBirth": "1990-01-01T00:00:00Z",
+  "patientGender": "M",
+  "patientPhone": "555-123456",
+  "patientEmail": "guillermo.reyes@mail.com",
+  "patientAddressLine1": "chillan 123",
+  "patientAddressLine2": "Depto 4",
+  "patientCity": "Chillan",
+  "patientState": "Ñuble",
+  "patientPostalCode": "8320000",
+  "patientCreatedBy": "admin",
+  "patientCreatedAt": "2025-08-09T03:41:31Z",
+  "patientModifiedBy": null,
+  "patientModifiedAt": null
+}
+
+### Actualizar paciente con ID 5
+PUT https://localhost:7229/api/patients/5
+Content-Type: application/json
+Authorization: ApiKey
+
+{
+  "patientFirstName": "Guillermo",
+  "patientLastName": "Reyes Updated",
+  "patientRUT": "12345678-9",
+  "patientDateOfBirth": "1990-01-01T00:00:00Z",
+  "patientGender": "M",+56977775555",
+  "patientEmail": "guillermo.reyes.updated@mail.com",
+  "patientAddressLine1": "Calle Nueva 456",
+  "patientAddressLine2": "Depto 7",
+  "patientCity": "Santiago",
+  "patientState": "RM",
+  "patientPostalCode": "8320000",
+  "patientCreatedBy": "admin",
+  "patientCreatedAt": "2025-08-09T03:41:31Z",
+  "patientModifiedBy": "admin",
+  "patientModifiedAt": "2025-08-09T03:41:31Z"
+}
+
+### Eliminar paciente con ID 5
+DELETE https://localhost:7229/api/patients/5
+Authorization: ApiKey
+
+### Buscar pacientes (por RUT, nombre, rango de fecha de nacimiento)
+GET https://localhost:7229/api/patients/search?rut=12345678-9&name=Guillermo&birthDateFrom=1980-01-01&birthDateTo=2000-12-31
+Authorization: ApiKey
+
+
+### ESPECIALIDADES ###
+
+### Obtener todas las especialidades
+GET https://localhost:7229/api/speciality
+Authorization: ApiKey
+
+### Obtener especialidad por ID
+GET https://localhost:7229/api/speciality/5
+Authorization: ApiKey
+
+### Crear nueva especialidad
+POST https://localhost:7229/api/speciality
+Content-Type: application/json
+Authorization: ApiKey
+
+{
+  "speciality_Name": "Cardiología",
+  "speciality_Description": "Especialidad relacionada con el corazón",
+  "speciality_CreatedBy": "admin",
+  "speciality_CreatedAt": "2025-08-09T03:41:31Z",
+  "speciality_ModifiedBy": null,
+  "speciality_ModifiedAt": null
+}
+
+### Actualizar especialidad con ID 5
+PUT https://localhost:7229/api/speciality/5
+Content-Type: application/json
+Authorization: ApiKey
+
+{
+  "speciality_Name": "Cardiología Avanzada",
+  "speciality_Description": "Especialidad de corazón y vasos sanguíneos",
+  "speciality_CreatedBy": "admin",
+  "speciality_CreatedAt": "2025-08-09T03:41:31Z",
+  "speciality_ModifiedBy": "admin",
+  "speciality_ModifiedAt": "2025-08-09T03:41:31Z"
+}
+
+### Eliminar especialidad con ID 5
+DELETE https://localhost:7229/api/speciality/5
+Authorization: ApiKey
