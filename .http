@@ -2,7 +2,7 @@
 GET https://localhost:7229/api/doctor
 Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7 
 
-### Obtener doctor por ID
+### Obtener doctor por ID ###
 GET https://localhost:7229/api/doctor/5
 Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7 
 
@@ -48,9 +48,9 @@ Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 DELETE https://localhost:7229/api/doctor/5
 Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7 
 
-###=====================
-### Appointments (Citas)
-###====================
+
+### Appointments (Citas) ###
+
 
 ### Obtener todas las citas
 GET https://localhost:7229/api/appointment
