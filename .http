@@ -1,15 +1,15 @@
-﻿### Obtener todos los doctores
+### Obtener todos los doctores
 GET https://localhost:7229/api/doctor
-Authorization: ApiKey 
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7 
 
 ### Obtener doctor por ID
 GET https://localhost:7229/api/doctor/5
-Authorization: ApiKey 
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7 
 
 ### Crear nuevo doctor
 POST https://localhost:7229/api/doctor
 Content-Type: application/json
-Authorization: ApiKey 
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7 
 
 {
     "doctor_FirstName": "Jhon",
@@ -28,7 +28,7 @@ Authorization: ApiKey
 ### Actualizar doctor con ID 5
 PUT https://localhost:7229/api/doctor/5
 Content-Type: application/json
-Authorization: ApiKey 
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7 
 
 {
     "doctor_FirstName": "Jhon",
@@ -46,7 +46,7 @@ Authorization: ApiKey
 
 ### Eliminar doctor con ID 5
 DELETE https://localhost:7229/api/doctor/5
-Authorization: ApiKey 
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7 
 
 ###=====================
 ### Appointments (Citas)
@@ -54,16 +54,16 @@ Authorization: ApiKey
 
 ### Obtener todas las citas
 GET https://localhost:7229/api/appointment
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener cita por ID
 GET https://localhost:7229/api/appointment/5
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Crear nueva cita
 POST https://localhost:7229/api/appointment
 Content-Type: application/json
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 {
   "patientId": 1,
@@ -81,7 +81,7 @@ Authorization: ApiKey
 ### Actualizar cita con ID 5
 PUT https://localhost:7229/api/appointment/5
 Content-Type: application/json
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 {
   "patientId": 1,
@@ -98,47 +98,47 @@ Authorization: ApiKey
 
 ### Eliminar cita con ID 5
 DELETE https://localhost:7229/api/appointment/5
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener citas por fecha (YYYY-MM-DD)
 GET https://localhost:7229/api/appointment/by-date/2025-08-15
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener citas por rango de fechas
 GET https://localhost:7229/api/appointment/by-date-range?start=2025-08-10T08:00:00&end=2025-08-10T18:00:00
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener citas por doctor (nombre o apellido)
 GET https://localhost:7229/api/appointment/by-doctor/Jhon
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener citas por paciente (nombre, apellido o RUT)
 GET https://localhost:7229/api/appointment/by-patient/Jerry
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener citas por especialidad
 GET https://localhost:7229/api/appointment/by-specialty/Reumatologia
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener duración promedio de citas por especialidad
 GET https://localhost:7229/api/appointment/average-duration-by-specialty
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 
 ### PACIENTES ###
 
 ### Obtener todos los pacientes
 GET https://localhost:7229/api/patients
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener paciente por ID
 GET https://localhost:7229/api/patients/5
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Crear nuevo paciente
 POST https://localhost:7229/api/patients
 Content-Type: application/json
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 {
   "patientFirstName": "Guillermo",
@@ -162,7 +162,7 @@ Authorization: ApiKey
 ### Actualizar paciente con ID 5
 PUT https://localhost:7229/api/patients/5
 Content-Type: application/json
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 {
   "patientFirstName": "Guillermo",
@@ -184,27 +184,27 @@ Authorization: ApiKey
 
 ### Eliminar paciente con ID 5
 DELETE https://localhost:7229/api/patients/5
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Buscar pacientes (por RUT, nombre, rango de fecha de nacimiento)
 GET https://localhost:7229/api/patients/search?rut=12345678-9&name=Guillermo&birthDateFrom=1980-01-01&birthDateTo=2000-12-31
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 
 ### ESPECIALIDADES ###
 
 ### Obtener todas las especialidades
 GET https://localhost:7229/api/speciality
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Obtener especialidad por ID
 GET https://localhost:7229/api/speciality/5
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 ### Crear nueva especialidad
 POST https://localhost:7229/api/speciality
 Content-Type: application/json
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 {
   "speciality_Name": "Cardiología",
@@ -218,7 +218,7 @@ Authorization: ApiKey
 ### Actualizar especialidad con ID 5
 PUT https://localhost:7229/api/speciality/5
 Content-Type: application/json
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
 
 {
   "speciality_Name": "Cardiología Avanzada",
@@ -231,4 +231,4 @@ Authorization: ApiKey
 
 ### Eliminar especialidad con ID 5
 DELETE https://localhost:7229/api/speciality/5
-Authorization: ApiKey
+Authorization: 0f8000a9-b4b9-45e6-b5ad-6a4696c198b7
