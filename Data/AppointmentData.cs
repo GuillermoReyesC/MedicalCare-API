@@ -39,6 +39,7 @@ namespace MedicalCare.Data
                     a.Appointment_ModifiedAt,
                     p.Patient_FirstName,
                     p.Patient_LastName,
+                    p.Patient_RUT,
                     d.Doctor_FirstName,
                     d.Doctor_LastName
                 FROM Appointment a
@@ -67,6 +68,7 @@ namespace MedicalCare.Data
                             Appointment_ModifiedAt = reader["Appointment_ModifiedAt"] is DBNull ? (DateTime?)null : Convert.ToDateTime(reader["Appointment_ModifiedAt"]),
                             Patient_FirstName = reader["Patient_FirstName"].ToString(),
                             Patient_LastName = reader["Patient_LastName"].ToString(),
+                            Patient_Rut = reader["Patient_RUT"].ToString(),
                             Doctor_FirstName = reader["Doctor_FirstName"].ToString(),
                             Doctor_LastName = reader["Doctor_LastName"].ToString()
                         });
@@ -103,6 +105,7 @@ namespace MedicalCare.Data
                     a.Appointment_ModifiedAt,
                     p.Patient_FirstName,
                     p.Patient_LastName,
+                    p.Patient_RUT,
                     d.Doctor_FirstName,
                     d.Doctor_LastName
                 FROM Appointment a
@@ -134,6 +137,7 @@ namespace MedicalCare.Data
                             Appointment_ModifiedAt = reader["Appointment_ModifiedAt"] is DBNull ? (DateTime?)null : Convert.ToDateTime(reader["Appointment_ModifiedAt"]),
                             Patient_FirstName = reader["Patient_FirstName"].ToString(),
                             Patient_LastName = reader["Patient_LastName"].ToString(),
+                            Patient_Rut = reader["Patient_RUT"].ToString(),
                             Doctor_FirstName = reader["Doctor_FirstName"].ToString(),
                             Doctor_LastName = reader["Doctor_LastName"].ToString()
                         };
