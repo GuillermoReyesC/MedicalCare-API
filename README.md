@@ -41,9 +41,14 @@ es un procedimiento que funciona por pasos;
 ## Instrucciones
 
 1. Descarga el proyecto del repositorio 'https://github.com/GuillermoReyesC/MedicalCare-API'
-2. Configura la cadena de conexión a SQL Server con tu conectionString en la capa 'Data' en ConexionesData, actualmente estan mis credenciales a la bd.
-3. abre el archivo .sln dentro de la solución
-4. ejecutalo y automaticamente estará Swagger listo para testear
+2. Configura el string de conexión a SQL Server con tu conectionString en la capa 'Data' en ConexionesData, actualmente está comentado el método directo.
+
+El método actual utiliza el string de conexión y el apiKey desde appsettings.json.  Esto lo cambie de como se llamaba de la forma directa a trabajar desde appsettings.json por el aviso de github de un secreto expuesto en el repositorio.
+
+3. IMPORTANTE. recuerda agregar tus credenciales de conexion, ya sea en ConexionesData y descomentando los metodos directos, o bien, agregando tus credenciales donde corresponden, en appsettings.json.
+
+4. abre el archivo .sln dentro de la solución
+5. ejecutalo y automaticamente estará Swagger listo para testear, adicional desde el archivo .http puedes hacer pruebas desde Visual Studio.
 
 
 ## Uso
