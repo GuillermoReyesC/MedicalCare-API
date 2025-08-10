@@ -3,7 +3,7 @@
     Create date:    2025
     Description:    Maneja las conexiones a orígenes de datos SQL Server.
                     - Incluye (comentado) un ejemplo de conexión directa 
-                      cadena en el código (motivo de cambio: secreto expuesto en github).
+                      en el código. (motivo de cambio: secreto expuesto en github).
                     - El string de conexion y el apikey se leen 
                       desde appsettings.json
 					- se realiza con un constructor para cargar y preparar el acceso a la config 
