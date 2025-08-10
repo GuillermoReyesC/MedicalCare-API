@@ -11,15 +11,15 @@ MedicalCare-API es una API REST desarrollada en .NET 8 con C# y SQL Server, dise
 - si bien utilicé mayormente ADO.NET, tambien utilcé Dapper para manejar las operaciones de las especialidades.
 
 - Se utiliza un servicio creado de Inyección de dependencias para validar la existencia previa de rut y para validar que las horas no se solapen con otras, tanto por doctor, y paciente sus horarios.
--se utiliza una tupla con el objtivo de poder manejar y devolver un mensaje y estado de disponibilidad de horarios.
+- se utiliza una tupla con el objtivo de poder manejar y devolver un mensaje y estado de disponibilidad de horarios.
 
--Se crean procedimientos Almacenados, uno para manejar la insercion de actualizacion  de Doctor (sp_UpdateDoctor), Se usa el procedimiento  porque primero revisamos si la especialidad cambia, si cambia, insertamos una nueva, cambia cuando se inserta nombre o descripcion. el paso siguiente inserta  los nuevos datos a actualizar.
+- Se crean procedimientos Almacenados, uno para manejar la insercion de actualizacion  de Doctor (sp_UpdateDoctor), Se usa el procedimiento  porque primero revisamos si la especialidad cambia, si cambia, insertamos una nueva, cambia cuando se inserta nombre o descripcion. el paso siguiente inserta  los nuevos datos a actualizar.
 
 - El otro Procedimiento almacenado se llama  (sp_CheckAppointmentAvailability),  se utiliza con el metodo en service para DI con el fin de  revisar disponibilidad de horario recibe fecha inicio, fecha fin, iddoctor, IdPaciente
 es un procedimiento que funciona por pasos;
--si el doctor esta ocupado en ese horario, entrega un mensaje
--si el paciente tiene una hora asignada en ese horario, entrega otro mensaje
--cuando es correcto retorna 'Disponible'.
+- si el doctor esta ocupado en ese horario, entrega un mensaje
+- si el paciente tiene una hora asignada en ese horario, entrega otro mensaje
+- cuando es correcto retorna 'Disponible'.
 
 - Se agregan 10 minutos al inicio y al final por concepto de demora de paciente o por atraso de doctor.
 
