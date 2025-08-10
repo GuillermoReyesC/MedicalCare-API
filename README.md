@@ -28,7 +28,7 @@ es un procedimiento que funciona por pasos;
 
 - Idealmente  me hubiese gustado hacer mas cosas, como cambiar el eliminado robusto por un barrido lógico, agregando estados e las entidades SQL, de ese modo sólo cambiamos estados de cada objeto. sin eliminar nada.
 - Tambien me hubiese gustado hacer los demás metodos con Dapper, ya que los ice con ADO.net, por costumbre y facilidad, aunque ya pude ver los beneficios de Dapper.
-- Hubiese hecho pruebas, pero por tiempo no pude??. 
+- Hubiese hecho pruebas, pero por tiempo no pude. 
 
 
 
